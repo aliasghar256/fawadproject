@@ -39,7 +39,9 @@ class ActionProvider {
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
   }
-  handleEndChat() {}
+  handleEndChat() {
+    window.location.href = "https://www.iba.edu.pk/";
+  }
 
   handleHumanHelp() {
     const message = this.createChatBotMessage(

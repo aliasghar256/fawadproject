@@ -39,7 +39,9 @@ class HumanActionProvider {
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
   }
-  handleEndChat() {}
+  handleEndChat() {
+    window.location.href = "https://www.google.com";
+  }
 
   handleHumanHelp() {
     const message = this.createChatBotMessage(
