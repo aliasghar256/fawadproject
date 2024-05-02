@@ -1,7 +1,7 @@
 // src/Options.js
 import React from 'react';
 
-const Options = (props) => {
+const HumanOptions = (props) => {
     const options = [
         { text: "Invest in equity or Debt?", handler: () => props.actionProvider.handleProductHelp(), id: 1 },
         { text: "Which stock should I hold?", handler: () => props.actionProvider.handleCompanyInfo(), id: 2 },
@@ -24,4 +24,4 @@ const Options = (props) => {
     return <div className="options-container">{optionsMarkup}</div>;
 };
 
-export default Options;
+export default HumanOptions;

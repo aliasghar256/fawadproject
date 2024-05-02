@@ -1,9 +1,8 @@
 //config.js
 import { createChatBotMessage } from 'react-chatbot-kit';
-import Options from './Options';
-
+import HumanOptions from './Options';
 const config = {
-    botName: "HelperBot",
+    botName: "Human",
     initialMessages: [
         createChatBotMessage(" Hey Stranger! I'm InvestBot898 here to advise you on your investment needs. How may I help you?", {
             widget: "options",
@@ -12,7 +11,7 @@ const config = {
     widgets: [
         {
             widgetName: "options",
-            widgetFunc: (props) => <Options {...props} />,
+            widgetFunc: (props) => <HumanOptions {...props} />,
             props: {}
         },
     ],

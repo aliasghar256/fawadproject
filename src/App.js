@@ -5,7 +5,10 @@ import ChatbotConfig from "./chatbot/config";
 import ActionProvider from './chatbot/ActionProvider';
 import MessageParser from './chatbot/MessageParser';
 import 'react-chatbot-kit/build/main.css'
-
+// import HumanBot from './humanbot/ChatbotComponent';
+// import config from './humanbot/config';
+// import ActionProvider from './humanbot/ActionProvider';
+// import MessageParser from './humanbot/ActionProvider';
 
 
 
@@ -17,12 +20,14 @@ function App(){
           actionProvider={ActionProvider}
           messageParser={MessageParser}
         />
-    </div>
+        {/* {<HumanBot config={config}
+          actionProvider={ActionProvider}
+          messageParser={MessageParser} />  */}
+    </div> 
   )
   
 }
 
-// function App() {
 //   return (
 //     <div className="chat-container">
 //       <div className="chat-body">
