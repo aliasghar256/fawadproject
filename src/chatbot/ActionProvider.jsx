@@ -45,16 +45,6 @@ class ActionProvider {
     this.updateChatbotState(message);
   }
 
-  handleProductHelp() {
-    const message = this.createChatBotMessage(
-      "Your Question: Hey. As an investor with a medium risk profile in Pakistan, should I invest in equity or debt and why?"
-    );
-    const message2 = this.createChatBotMessage(
-      "Answer: You should invest in the debt market as SBP has raised its policy rate in the past few years and has maintained in the past few quarters. This has had a positive impact on rates of return of all debt instruments, also most debt instruments are low-risk."
-    );
-    this.updateChatbotState(message);
-    this.updateChatbotState(message2);
-  }
 
   
 
