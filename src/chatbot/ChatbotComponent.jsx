@@ -7,7 +7,7 @@ function ChatbotComponent() {
     initialMessages: [
       { type: "text", text: "Hi! What can I help you with today?", id: "1" },
     ],
-    botName: "HelperBot",
+    botName: "InvestBot898",
     customStyles: {
       botMessageBox: {
         backgroundColor: "#376B7E",

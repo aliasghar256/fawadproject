@@ -3,7 +3,7 @@ import { createChatBotMessage } from 'react-chatbot-kit';
 import Options from './Options';
 
 const config = {
-    botName: "HelperBot",
+    botName: "InvestBot898",
     initialMessages: [
         createChatBotMessage(" Hey Stranger! I'm InvestBot898 here to advise you on your investment needs. How may I help you?", {
             widget: "options",

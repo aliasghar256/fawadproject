@@ -20,9 +20,6 @@ function App(){
           actionProvider={ActionProvider}
           messageParser={MessageParser}
         />
-        {/* {<HumanBot config={config}
-          actionProvider={ActionProvider}
-          messageParser={MessageParser} />  */}
     </div> 
   )
   
