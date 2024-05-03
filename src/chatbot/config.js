@@ -26,8 +26,13 @@ const config = {
     },
     customComponents: {
         // Replaces the default bot avatar
-        botAvatar: (props) => <img src="../robot.png" alt="Bot Avatar" {...props} />
-      }
+        botAvatar: (props) =>  <img 
+        src="../robot.png" 
+        alt="Bot Avatar" 
+        {...props} 
+        style={{ width: '90px', height: '90px' }}
+    />
+      },
 };
 
 export default config;
