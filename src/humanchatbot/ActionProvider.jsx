@@ -55,7 +55,7 @@ class ActionProvider {
 
   handleHumanHelp(shows, setShow, id) {
     const message = this.createChatBotMessage(
-      "Well, bitcoins a bit risky. I'm glad you made gains in it but cryptocurrencies are seeing a dip in their value due to geopolitical tensions in the Middle East"
+      "Well, bitcoins a bit risky. I'm glad you made gains in it but cryptocurrencies have been seeing a dip in their value since the rise of the geopolitical tensions in the Middle East"
     );
     const message2 = this.createChatBotMessage(
       "You should consider selling so that you don't lose on the gains you've already made."
