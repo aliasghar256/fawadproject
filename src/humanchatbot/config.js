@@ -24,6 +24,10 @@ const config = {
             backgroundColor: "#5ccc9d",
         },
     },
+    customComponents: {
+        // Replaces the default bot avatar
+        botAvatar: (props) => <img src="../human.png" alt="Bot Avatar" {...props} />
+      },
 };
 
 export default config;
