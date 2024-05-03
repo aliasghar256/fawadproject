@@ -5,41 +5,38 @@ import ChatbotConfig from "./chatbot/config";
 import ActionProvider from './chatbot/ActionProvider';
 import MessageParser from './chatbot/MessageParser';
 import 'react-chatbot-kit/build/main.css'
-// import HumanBot from './humanbot/ChatbotComponent';
-// import config from './humanbot/config';
-// import ActionProvider from './humanbot/ActionProvider';
-// import MessageParser from './humanbot/ActionProvider';
+import ChatbotComponent from './chatbot/ChatbotComponent';
+import hChatbotConfig from "./humanchatbot/config";
+import hActionProvider from './humanchatbot/ActionProvider';
+import hMessageParser from './humanchatbot/MessageParser';
 
+function App() {
+  const [chatbot, setChatbot] = React.useState(true);
 
-
-function App(){
-  return(
-    <div className="chat-container">
-    <Chatbot
-          config={ChatbotConfig}
-          actionProvider={ActionProvider}
-          messageParser={MessageParser}
-        />
-    </div> 
-  )
-  
+  return (
+    <div className="App">
+        <button onClick={() => setChatbot(!chatbot)} className='toggle-button'>
+        {chatbot ? "Switch to Human Chat" : "Switch to Bot Chat"}
+      </button>
+      <div className="chat-container">
+        {chatbot && (
+          <Chatbot
+            config={ChatbotConfig}
+            actionProvider={ActionProvider}
+            messageParser={MessageParser}
+          />
+        )}
+        {!chatbot && (
+          <Chatbot
+            config={hChatbotConfig}
+            actionProvider={hActionProvider}
+            messageParser={hMessageParser}
+          />
+        )}
+      </div>
+      
+    </div>
+  );
 }
-
-//   return (
-//     <div className="chat-container">
-//       <div className="chat-body">
-//         <Chatbot
-//           config={ChatbotConfig}
-//           actionProvider={ActionProvider}
-//           messageParser={MessageParser}
-//         />
-//       </div>
-//       {/* <div className="chat-footer">
-//         <input type="text" placeholder="Type a message..." />
-//         <button className="send-button">Send</button>
-//       </div> */}
-//     </div>
-//   );
-// }
 
 export default App;

@@ -1,6 +1,31 @@
+/* Add this to your CSS */
+
 .App {
   text-align: center;
 }
+
+.chat-container {
+  max-width: 350px;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Add this */
+  align-items: center; /* Add this */
+}
+
+.toggle-button {
+  background-color: #4a76a8;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px; /* Adjust as needed */
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
 
 .App-logo {
   height: 40vmin;
@@ -81,6 +106,18 @@ button.send-button {
   line-height: 24px;
   position: relative;
   max-width: 80%;
+}
+
+.toggle-button{
+  background-color: #4a76a8;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline;
 }
 
 .message-bot {
