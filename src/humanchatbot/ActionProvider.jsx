@@ -68,10 +68,10 @@ class ActionProvider {
 
   handleRussianPakistaniStocks(shows, setShow, id) {
     const message = this.createChatBotMessage(
-      "You should invest in the Pakistani Stock Market. The KSE-100 had a bumpy ride during the first half of FY23 due to economic and political uncertainty, however the market took a turnaround on Jun, 30 2023."
+      "As this was the time when IMF and the Pak government reached a staff level agreement for a bailout package. Now a young stock market that massively turns around mid of the year can't be compared to a well-built, first-world stock market right?"
     );
     const message2 = this.createChatBotMessage(
-      "Conditions are bound to improve. Besides, investing in international stocks is always a hassle of finding the right broker the right information etc... better the devil you know right?"
+      "You should invest in the Pakistani Stock Market. The KSE-100 had a bumpy ride during the first half of FY23 due to economic and political uncertainty, however the market took a turnaround on Jun, 30 2023."
     );
     this.delayMessage(message);
     this.delayMessage(message2, 1500);
