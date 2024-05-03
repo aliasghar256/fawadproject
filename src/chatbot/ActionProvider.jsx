@@ -25,7 +25,7 @@ class ActionProvider {
       "Hold Meezan Bank Stocks. They achieved their highest ever profits in FY23."
     );
     const message2 = this.createChatBotMessage(
-      "Alternatively, consider investing in gas or oil exploration companies and refineries. Rising global fuel prices combined with potential new oil and gas fields in Sindh gives a positive outlook for these firms."
+      "Furthermore, you should consider investing in gas or oil exploration companies and refineries. Rising global fuel prices combined with potential new oil and gas fields in Sindh gives a positive outlook for these firms."
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);

@@ -5,25 +5,25 @@ const Options = (props) => {
   const [shows, setShow] = useState([true,true,true,true,true,true])
   const options = [
     {
-      text: "Invest in Equity or Debt?",
+      text: "As an investor with a medium risk profile in Pakistan, should I invest in equity or debt and why?",
       handler: () => props.actionProvider.handleProductHelp(shows, setShow,0),
       show: shows[0],
       id: 1,
     },
     {
-      text: "Which Stock Should I Hold?",
+      text: "What Pakistani stocks should I hold till the end of this year and why?",
       handler: () => props.actionProvider.handleCompanyInfo(shows, setShow,1),
       show: shows[1],
       id: 2,
     },
     {
-      text: "Gains in Bitcoin. Hold or Sell?",
+      text: "I made a gain of more than 150% holding Bitcoin in 2023. Should I continue to hold or sell?",
       handler: () => props.actionProvider.handleHumanHelp(shows, setShow,2),
       show: shows[2],
       id: 3,
     },
     {
-      text: "Pakistani v. Russian Stocks 2023",
+      text: "I'm a beginner at investing. Should I invest in the Russian stock market or the Pakistani stock market considering the 2023 performance of both?",
       handler: () => props.actionProvider.handleMonkey(shows, setShow,3),
       show: shows[3],
       id: 4,
