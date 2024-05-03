@@ -12,7 +12,7 @@ class ActionProvider {
       "The stock market is expected to reach its record high of 80,000 points in 2024- attributed to $1.1 billion IMF bailout and reduced uncertaintity."
     );
     const message2 = this.createChatBotMessage(
-      "However, stock markets remain volatile. In 2024, foreign investment returned to Pakistan's debt and money markets, with $126 million flowing into T-Bills since January. You should invest in debt market instead."
+      "However, stock markets remain volatile. In 2024, foreign investment returned to Pakistan's debt and money markets, with $126 million flowing into T-Bills since January. Because SBP policy rate has remained steady at 22% for several quarters and is expected to stay that way, you should invest in debt market instead."
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
