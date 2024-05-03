@@ -5,7 +5,7 @@ import Options from './Options';
 const config = {
     botName: "Hassan Batwa",
     initialMessages: [
-        createChatBotMessage(" Hey Stranger! I'm InvestBot898 here to advise you on your investment needs. How may I help you?", {
+        createChatBotMessage(" Hi! I'm Hassan Batwa I'm here to advise you on your investment needs. What can i do for you today?", {
             widget: "options",
         }),
     ],
