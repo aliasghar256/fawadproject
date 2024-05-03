@@ -11,13 +11,13 @@
   height: 500px;
   margin: 30px auto;
   margin-top: 0;
+  margin-bottom: 0;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column; /* Add this */
   align-items: center; /* Add this */
   padding-top: 20px;
-  padding-bottom: 20px;
 
 }
 .react-chatbot-kit-chat-container{

@@ -15,9 +15,7 @@ function App() {
 
   return (
     <div className="App">
-        <button onClick={() => setChatbot(!chatbot)} className='toggle-button'>
-        {chatbot ? "Switch to Human Chat" : "Switch to Bot Chat"}
-      </button>
+        
       <div className="chat-container">
         {chatbot && (
           <Chatbot
@@ -34,6 +32,9 @@ function App() {
           />
         )}
       </div>
+      <button onClick={() => setChatbot(!chatbot)} className='toggle-button'>
+        {chatbot ? "Switch to Human Chat" : "Switch to Bot Chat"}
+      </button>
       
     </div>
   );
