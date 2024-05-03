@@ -7,7 +7,45 @@ class ActionProvider {
     this.setState = setStateFunc;
   }
 
-  handleProductHelp(shows, setShow, id) {
+  handleProductHelp() {
+    const message = this.createChatBotMessage(
+      "The stock market is expected to reach its record high of 80,000 points in 2024- attributed to $1.1 billion IMF bailout and reduced uncertaintity."
+    );
+    const message2 = this.createChatBotMessage(
+      "However, stock markets remain volatile. In 2024, foreign investment returned to Pakistan's debt and money markets, with $126 million flowing into T-Bills since January. You should invest in debt market instead."
+    );
+    this.updateChatbotState(message);
+    this.updateChatbotState(message2);
+  }
+
+  handleCompanyInfo() {
+    const message = this.createChatBotMessage(
+      "Hold Meezan Bank Stocks. They achieved their highest ever profits in FY23."
+    );
+    const message2 = this.createChatBotMessage(
+      "Alternatively, consider investing in gas or oil exploration companies and refineries. Rising global fuel prices combined with potential new oil and gas fields in Sindh gives a positive outlook for these firms."
+    );
+    this.updateChatbotState(message);
+    this.updateChatbotState(message2);
+  }
+
+  handleHumanHelp() {
+    const message = this.createChatBotMessage(
+      "It is premature to sell your BTC right now. A halving event is scheduled for May 2024, and historical data indicates that BTC typically experiences an upward rally 12 months after a halving."
+    );
+    const message2 = this.createChatBotMessage(
+      "It's too early to let go of your BTC, there is more profit to be made."
+    );
+    this.updateChatbotState(message);
+    this.updateChatbotState(message2);
+  }
+
+  handleMonkey() {
+    const message = this.createChatBotMessage("Consider investing in the Russian Stock Market, which was the second-best performer in 2023. The Russian market gained approximately 43% in USD terms, outperforming the Pakistani market, which saw a gain of around 24%.");
+    this.updateChatbotState(message);
+  }
+
+  handleProductHelp() {
     const message = this.createChatBotMessage(
       "Your Question: Hey. As an investor with a medium risk profile in Pakistan, should I invest in equity or debt and why?"
     );
@@ -16,69 +54,16 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
-    shows[id] = false;
-    setShow([...shows]);
   }
 
-  handleCompanyInfo(shows, setShow, id) {
-    const message = this.createChatBotMessage(
-      "Your Question: What Pakistani stocks should I hold till the end of this year and why?"
-    );
-    const message2 = this.createChatBotMessage(
-      "Answer: You should hold stock abc, stock xyz for this and that reason"
-    );
-    this.updateChatbotState(message);
-    this.updateChatbotState(message2);
-    shows[id] = false;
-    setShow([...shows]);
-  }
+  
 
-  handleMeezanEnergyRisk(shows, setShow, id) {
-    const message = this.createChatBotMessage(
-      "Your Question: Is it wise to invest in the Meezan Energy Fund considering I'm an investor with a medium risk-appetite. Explain in detail using the relevant numbers and figures."
-    );
-    const message2 = this.createChatBotMessage(
-      "Answer: It is unwise to do so as energy prices are fluctuating and highly uncertain, and the fund is profiled as high risk while your risk appetite is medium"
-    );
-    this.updateChatbotState(message);
-    this.updateChatbotState(message2);
-    shows[id] = false;
-    setShow([...shows]);
-  }
-  handleEndChat(shows, setShow, id) {
-    window.location.href = "https://www.iba.edu.pk/";
-  }
-
-  handleHumanHelp(shows, setShow, id) {
-    const message = this.createChatBotMessage(
-      "Your Question: I made a gain of more than 150% holding Bitcoin in 2023. Should I continue to hold or sell?"
-    );
-    const message2 = this.createChatBotMessage(
-      "Answer: It's too early to let go of your BTC you've got more gains to make"
-    );
-    this.updateChatbotState(message);
-    this.updateChatbotState(message2);
-    shows[id] = false;
-    setShow([...shows]);
-  }
-
-  handleRussianPakistaniStocks(shows, setShow, id) {
-    const message = this.createChatBotMessage(
-      "I'm a beginner at investing. Should I invest in the Russian stock market or the Pakistani stock market considering the 2023 performance of both?"
-    );
-    const message2 = this.createChatBotMessage(
-      "Answer: You should invest in Russian Stock Market as it was the second best performing in 2023"
-    );
-    this.updateChatbotState(message);
-    this.updateChatbotState(message2);
-    shows[id] = false;
-    setShow([...shows]);
-  }
+  
 
   updateChatbotState(message) {
     this.setState((prevState) => ({
       ...prevState,
-      messages: [message, ...prevState.messages],
+      messages: [...prevState.messages, message],
     }));
   }
 }

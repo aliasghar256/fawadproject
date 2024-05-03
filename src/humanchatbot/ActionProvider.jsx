@@ -9,10 +9,10 @@ class ActionProvider {
 
   handleProductHelp(shows, setShow, id) {
     const message = this.createChatBotMessage(
-      "Your Question: Hey. As an investor with a medium risk profile in Pakistan, should I invest in equity or debt and why?"
+      "Honestly? Since the political unrest seems to have more or less abated and articles and international perception is our economy is improving... You should definitely consider investing in the stock market!"
     );
     const message2 = this.createChatBotMessage(
-      "Answer: You should invest in the debt market as SBP has raised its policy rate in the past few years and has maintained in the past few quarters. This has had a positive impact on rates of return of all debt instruments, also most debt instruments are low-risk."
+      "Well, The KSE-100 index surged past 72,000 points, nearing its forecasted record high of 80,000 in 2024 by AKD Research and successful negotiations with IMF does seem to be bringing much needed stability to our stock market."
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
@@ -22,13 +22,13 @@ class ActionProvider {
 
   handleCompanyInfo(shows, setShow, id) {
     const message = this.createChatBotMessage(
-      "Your Question: What Pakistani stocks should I hold till the end of this year and why?"
+      "Diversify. You're probably sick to death hearing this, but you need to optimize your risk to return ratio. Diversify your risk by investing in a portfolio or mutual fund."
     );
-    const message2 = this.createChatBotMessage(
-      "Answer: You should hold stock abc, stock xyz for this and that reason"
-    );
+    // const message2 = this.createChatBotMessage(
+    //   "Answer: You should hold stock abc, stock xyz for this and that reason"
+    // );
     this.updateChatbotState(message);
-    this.updateChatbotState(message2);
+    // this.updateChatbotState(message2);
     shows[id] = false;
     setShow([...shows]);
   }
@@ -51,10 +51,10 @@ class ActionProvider {
 
   handleHumanHelp(shows, setShow, id) {
     const message = this.createChatBotMessage(
-      "Your Question: I made a gain of more than 150% holding Bitcoin in 2023. Should I continue to hold or sell?"
+      "Well, bitcoins a bit risky. I'm glad you made gains in it but cryptocurrencies are seeing a dip in their value due to geopolitical tensions in the Middle East"
     );
     const message2 = this.createChatBotMessage(
-      "Answer: It's too early to let go of your BTC you've got more gains to make"
+      "You should consider selling so that you don't lose on the gains you've already made."
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
@@ -64,10 +64,10 @@ class ActionProvider {
 
   handleRussianPakistaniStocks(shows, setShow, id) {
     const message = this.createChatBotMessage(
-      "I'm a beginner at investing. Should I invest in the Russian stock market or the Pakistani stock market considering the 2023 performance of both?"
+      "You should invest in the Pakistani Stock Market. The KSE-100 had a bumpy ride during the first half of FY23 due to economic and political uncertainty, however the market took a turnaround on Jun, 30 2023."
     );
     const message2 = this.createChatBotMessage(
-      "Answer: You should invest in Russian Stock Market as it was the second best performing in 2023"
+      "Conditions are bound to improve. Besides, investing in international stocks is always a hassle of finding the right broker the right information etc... better the devil you know right?"
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
