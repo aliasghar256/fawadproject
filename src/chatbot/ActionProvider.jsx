@@ -54,7 +54,7 @@ class ActionProvider {
     this.updateChatbotState(message2);
   }
 
-  handlehandleRussianPakistaniStocks() {
+  handleRussianPakistaniStocks() {
     const message = this.createChatBotMessage(
       "I'm a beginner at investing. Should I invest in the Russian stock market or the Pakistani stock market considering the 2023 performance of both?"
     );
