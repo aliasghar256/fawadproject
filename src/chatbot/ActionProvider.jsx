@@ -7,7 +7,7 @@ class ActionProvider {
     this.setState = setStateFunc;
   }
 
-  handleProductHelp() {
+  handleProductHelp(shows, setShow,id) {
     const message = this.createChatBotMessage(
       "Your Question: Hey. As an investor with a medium risk profile in Pakistan, should I invest in equity or debt and why?"
     );
@@ -16,9 +16,11 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
+    shows[id] = false;
+    setShow([...shows]);
   }
 
-  handleCompanyInfo() {
+  handleCompanyInfo(shows, setShow,id) {
     const message = this.createChatBotMessage(
       "Your Question: What Pakistani stocks should I hold till the end of this year and why?"
     );
@@ -27,9 +29,11 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
+    shows[id] = false;
+    setShow([...shows]);
   }
 
-  handleMeezanEnergyRisk() {
+  handleMeezanEnergyRisk(shows, setShow,id) {
     const message = this.createChatBotMessage(
       "Your Question: Is it wise to invest in the Meezan Energy Fund considering I'm an investor with a medium risk-appetite. Explain in detail using the relevant numbers and figures."
     );
@@ -38,12 +42,14 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
+    shows[id] = false;
+    setShow([...shows]);
   }
-  handleEndChat() {
+  handleEndChat(shows, setShow,id) {
     window.location.href = "https://www.iba.edu.pk/";
   }
 
-  handleHumanHelp() {
+  handleHumanHelp(shows, setShow,id) {
     const message = this.createChatBotMessage(
       "Your Question: I made a gain of more than 150% holding Bitcoin in 2023. Should I continue to hold or sell?"
     );
@@ -52,9 +58,11 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
+    shows[id] = false;
+    setShow([...shows]);
   }
 
-  handleRussianPakistaniStocks() {
+  handleRussianPakistaniStocks(shows, setShow,id) {
     const message = this.createChatBotMessage(
       "I'm a beginner at investing. Should I invest in the Russian stock market or the Pakistani stock market considering the 2023 performance of both?"
     );
@@ -63,6 +71,8 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
+    shows[id] = false;
+    setShow([...shows]);
   }
 
   updateChatbotState(message) {
