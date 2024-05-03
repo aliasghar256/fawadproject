@@ -7,7 +7,7 @@ class ActionProvider {
     this.setState = setStateFunc;
   }
 
-  handleProductHelp() {
+  handleProductHelp(shows, setShow, id) {
     const message = this.createChatBotMessage(
       "The stock market is expected to reach its record high of 80,000 points in 2024- attributed to $1.1 billion IMF bailout and reduced uncertaintity."
     );
@@ -16,9 +16,11 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
+    shows[id] = false;
+    setShow([...shows]);
   }
 
-  handleCompanyInfo() {
+  handleCompanyInfo(shows, setShow, id) {
     const message = this.createChatBotMessage(
       "Hold Meezan Bank Stocks. They achieved their highest ever profits in FY23."
     );
@@ -27,9 +29,11 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
+    shows[id] = false;
+    setShow([...shows]);
   }
 
-  handleHumanHelp() {
+  handleHumanHelp(shows, setShow, id) {
     const message = this.createChatBotMessage(
       "It is premature to sell your BTC right now. A halving event is scheduled for May 2024, and historical data indicates that BTC typically experiences an upward rally 12 months after a halving."
     );
@@ -38,24 +42,34 @@ class ActionProvider {
     );
     this.updateChatbotState(message);
     this.updateChatbotState(message2);
+    shows[id] = false;
+    setShow([...shows]);
   }
 
-  handleMonkey() {
-    const message = this.createChatBotMessage("Consider investing in the Russian Stock Market, which was the second-best performer in 2023. The Russian market gained approximately 43% in USD terms, outperforming the Pakistani market, which saw a gain of around 24%.");
+  handleMonkey(shows, setShow, id) {
+    const message = this.createChatBotMessage(
+      "Consider investing in the Russian Stock Market, which was the second-best performer in 2023. The Russian market gained approximately 43% in USD terms, outperforming the Pakistani market, which saw a gain of around 24%."
+    );
     this.updateChatbotState(message);
+    shows[id] = false;
+    setShow([...shows]);
   }
-
-
-  
-
-  
-
+  handleEndChat() {
+    window.location.href =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfWCSbZG_gH0CeK1LUhllpTQztGT9VYXqcu0H5uxO_d3EolKg/viewform";
+  }
   updateChatbotState(message) {
     this.setState((prevState) => ({
       ...prevState,
       messages: [...prevState.messages, message],
     }));
   }
+  // updateClientState(message) {
+  //   this.setState((prevState) => ({
+  //     ...prevState,
+  //     messages: [...prevState.messages, message],
+  //   }));
+  // }
 }
 
 export default ActionProvider;

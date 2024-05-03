@@ -46,7 +46,8 @@ class ActionProvider {
     setShow([...shows]);
   }
   handleEndChat(shows, setShow, id) {
-    window.location.href = "https://www.iba.edu.pk/";
+    window.location.href =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfWCSbZG_gH0CeK1LUhllpTQztGT9VYXqcu0H5uxO_d3EolKg/viewform";
   }
 
   handleHumanHelp(shows, setShow, id) {
@@ -78,7 +79,7 @@ class ActionProvider {
   updateChatbotState(message) {
     this.setState((prevState) => ({
       ...prevState,
-      messages: [message, ...prevState.messages],
+      messages: [...prevState.messages, message],
     }));
   }
 }
