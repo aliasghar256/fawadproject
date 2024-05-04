@@ -30,7 +30,7 @@ const config = {
         src="../robot.png" 
         alt="Bot Avatar" 
         {...props} 
-        style={{ width: '90px', height: '90px', margin: '6px'}}
+        style={{ width: '70px', height: '70px', margin: '6px'}}
     />
       },
 };
