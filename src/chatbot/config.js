@@ -26,13 +26,17 @@ const config = {
     },
     customComponents: {
         // Replaces the default bot avatar
-        botAvatar: (props) =>  <img 
-        src="../robot.png" 
-        alt="Bot Avatar" 
-        {...props} 
-        style={{ width: '70px', height: '70px', margin: '6px'}}
-    />
-      },
+        botAvatar: (props) => (
+            <img
+                src="../robot.png"
+                alt="Bot Avatar"
+                {...props}
+                style={{ width: '70px', height: '70px', margin: '6px'}}
+            />
+        ),
+        // Hides the chat input container
+        chatInputContainer: () => null
+    }
 };
 
 export default config;

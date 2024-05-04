@@ -12,7 +12,10 @@ import hMessageParser from './humanchatbot/MessageParser';
 
 function App() {
   const [chatbot, setChatbot] = React.useState(true);
-
+  const chatInputContainer = document.getElementsByClassName('react-chatbot-kit-chat-input-container')[0];
+if (chatInputContainer) {
+    chatInputContainer.style.display = 'none';
+}
   return (
     <div className="App">
         
