@@ -167,6 +167,6 @@ button.send-button {
 
 @media screen and (max-width: 800px) {
   .react-chatbot-kit-chat-header{
-    padding-left: 10px;
+    padding-left: 20px;
   }
 }
