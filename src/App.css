@@ -17,13 +17,18 @@
   flex-direction: column; /* Add this */
   align-items: center; /* Add this */
   padding-top: 20px;
-
+  clip-path: inset(0px 0px 40px 0px);
 }
 .react-chatbot-kit-chat-input-container {
+  display: none;
+
+}
+.react-chatbot-kit-chat-input-form{
   display: none;
 }
 .react-chatbot-kit-chat-header{
   padding-left: 5px;
+  color: #4a76a8;
 }
 .react-chatbot-kit-chat-container{
   display: flex;
@@ -34,6 +39,9 @@
 }
 .react-chatbot-kit-chat-container .react-chatbot-kit-chat-inner-container{
   width: 360px;
+}
+form {
+  display: none;
 }
 .toggle-button {
   background-color: #4a76a8;
@@ -172,4 +180,5 @@ button.send-button {
   .react-chatbot-kit-chat-input-container {
     display: none;
   }
+
 }
