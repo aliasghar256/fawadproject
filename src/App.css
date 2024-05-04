@@ -164,3 +164,9 @@ button.send-button {
   justify-content: center;
   padding: 10px;
 }
+
+@media screen and (max-width: 800px) {
+  .react-chatbot-kit-chat-header{
+    padding-left: 10px;
+  }
+}
