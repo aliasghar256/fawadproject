@@ -169,4 +169,7 @@ button.send-button {
   .react-chatbot-kit-chat-header{
     padding-left: 20px;
   }
+  .react-chatbot-kit-chat-input-container {
+    display: none;
+  }
 }
