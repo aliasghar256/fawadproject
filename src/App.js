@@ -12,10 +12,13 @@ import hMessageParser from './humanchatbot/MessageParser';
 
 function App() {
   const [chatbot, setChatbot] = React.useState(true);
-  const chatInputContainer = document.getElementsByClassName('react-chatbot-kit-chat-input-container')[0];
-if (chatInputContainer) {
-    chatInputContainer.style.display = 'none';
-}
+  // Assuming the chat input container is the first match
+  const inputContainer = document.querySelector('.react-chatbot-kit-chat-input-container');
+
+  // Check if the input container exists and remove it
+  if (inputContainer) {
+      inputContainer.remove();
+  }
   return (
     <div className="App">
         

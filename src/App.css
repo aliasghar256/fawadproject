@@ -19,6 +19,12 @@
   padding-top: 20px;
 
 }
+.react-chatbot-kit-chat-input-container {
+  display: none;
+}
+.react-chatbot-kit-chat-header{
+  padding-left: 5px;
+}
 .react-chatbot-kit-chat-container{
   display: flex;
   flex-direction: column;
