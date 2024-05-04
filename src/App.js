@@ -12,6 +12,7 @@ import hMessageParser from "./humanchatbot/MessageParser";
 
 function App() {
   const [chatbot, setChatbot] = React.useState(true);
+  const [showingChatBot, setShowingChatBot] = React.useState(true);
 
   return (
     <div className="App">
@@ -36,9 +37,13 @@ function App() {
           </div>
         )}
       </div>
-      <button onClick={() => setChatbot(!chatbot)} className="toggle-button">
+      {showingChatBot && (
+      <button onClick={() => {
+        setChatbot(!chatbot)
+        setShowingChatBot(false)
+      }} className="toggle-button">
         {chatbot ? "Switch to Human Chat" : "Switch to Bot Chat"}
-      </button>
+      </button>)}
     </div>
   );
 }
